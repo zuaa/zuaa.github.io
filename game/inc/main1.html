@@ -1,0 +1,15 @@
+<table class="table table-condensed" >
+    <tbody>
+    <tr ng-repeat="item in pList">
+        <td >  <img src="{{item.img}}" align="top" border="0" height="120" width="120">
+        </td>
+        <td  >
+           {{item.name}} {{item.level}}   -<br>{{item.info}}<br>
+            {{item.timer}}<br>
+            资源要求: 金属:{{item.ziyuanyaoqiu.jinshu}}, 晶体 :{{item.ziyuanyaoqiu.jinshu}},重氢:{{item.ziyuanyaoqiu.jinshu}}
+            <br>
+            {{item.timer}}
+        </td>
+        <td  ><a href="" ng-click="addDoingList({ name:item.name,level:item.level+1 , 'totleTime':item.timer,'nowTime':1})">建造</a>  </td>
+    </tr>
+    </tbody></table>

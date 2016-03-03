@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.min.css">
+    <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.bootstrap.min.css">
+
+    <script>
+        angular.module('myApp', ['ngTagsInput'])
+                .controller('MyCtrl', function($scope, $http) {
+                    $scope.tags = [
+                        { text: 'just' },
+                        { text: 'some' },
+                        { text: 'cool' },
+                        { text: 'tags' }
+                    ];
+                    $scope.loadTags = function(query) {
+//                        return $http.get('/tags?query=' + query);
+                        return [{ text: 'Tag1' }, { text: 'Tag2' }, { text: 'Tag3' }]
+                    };
+                });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="MyCtrl">
+<div class="container" >
+
+<form action="">
+    <tags-input ng-model="tags" style="height: 30px;" >
+        <auto-complete source="loadTags($query)"></auto-complete>
+    </tags-input>
+</form>
+    </div>
+</body>
+</html>

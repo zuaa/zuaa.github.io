@@ -1,0 +1,16 @@
+<div   ng-repeat="item in doingList">
+     <div class="progress ">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{item.nowTime}}" aria-valuemin="0"
+             aria-valuemax="{{item.totle}}"
+             style="width: {{item.nowTime*100/item.totleTime}}%;">
+             <span class="sr-only"> {{item.name}}({{item.level}}) Complete (danger)</span>
+        </div>
+         <div class="progress-bar progress-bar-danger" style="width:{{  (item.totleTime-item.nowTime)*100/item.totleTime }}%">
+             <span class="sr-only"> {{  (item.totleTime-item.nowTime)*100/item.totleTime }} </span>
+         </div>
+    </div>
+</div>
+<div class="alert alert-info ogame-list"  ng-repeat="item in doneList">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <div><strong>{{item.name}}({{item.level}})</strong> {{item.timer}}开始</div>
+</div>

@@ -1,0 +1,21 @@
+<hr>
+<a href="" ng-click="loginIN()">登录,点击登录</a>
+<a href="" ng-click="reloadMap()">重新加载地图</a>
+
+<hr>
+<table class="table table-bordered table-condensed " ng-show="isLogin">
+    <tr ng-repeat="mapy in map" on-last-repeat>
+        <td ng-repeat="mapx in mapy track by $index" style=" padding: 0px;">
+            <div style="min-width: 40px;min-height: 40px;width: 212px;height: 212px;padding: 0px;margin: 0px;">
+                <a href="" style="display: block;width: 212px;height: 212px;" class="map"  alt="{{mapx.x}},{{mapx.y}}-{{mapx.dixing}}"
+                   title="{{mapx.x}},{{mapx.y}}-{{mapx.dixing}}">
+                    <div style="width: 212px;height: 212px;background-image: url({{mapx.map}}); background-position: 0px 0px; ">
+
+                    </div>
+                </a></div>
+        </td>
+    </tr>
+</table>
+
+
+

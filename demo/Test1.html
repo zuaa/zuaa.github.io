@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="myApp">
+<head> 
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="../bower_components/hprose/dist/hprose.js"></script>
+
+<script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/angular-route/angular-route.js"></script>
+
+
+ <script src="Test1.js"></script>
+</head>
+<body>
+  
+<h1>Open Pull Requests for Angular JS</h1>
+<h1>  {{ pullRequests.zuaa }}</h1>
+<ul ng-controller="DashboardController">
+  <li ng-repeat="pr in pullRequests">
+    {{ pr }}
+  </li>
+</ul>
+  
+</body>
+</html>
